@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO for Electricians | Sixth City Marketing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #c54b3c;
+            --primary-dark: #a33d31;
+            --primary-light: rgba(197, 75, 60, 0.08);
+            --dark: #2d2d2d;
+            --gray-dark: #4a4a4a;
+            --gray: #6b6b6b;
+            --gray-light: #f7f7f7;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+            --shadow-primary: 0 8px 30px rgba(197, 75, 60, 0.2);
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 18px 0;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.97);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--dark);
+            letter-spacing: -0.03em;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        nav a:not(.phone-btn)::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition-fast);
+        }
+
+        nav a:not(.phone-btn):hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .phone-btn {
+            background: var(--dark);
+            color: var(--white) !important;
+            padding: 11px 22px;
+            border-radius: 6px;
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .phone-btn:hover {
+            background: var(--gray-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(197, 75, 60, 0.96) 0%, rgba(163, 61, 49, 0.98) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/></svg>');
+            color: var(--white);
+            padding: 110px 0 120px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--primary-dark));
+        }
+
+        .hero h1 {
+            font-size: 3.25rem;
+            margin-bottom: 22px;
+            font-weight: 800;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 680px;
+            margin: 0 auto 35px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 38px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: var(--transition-smooth);
+            font-size: 1rem;
+            letter-spacing: 0.01em;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-white:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(197, 75, 60, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Pain Points Section */
+        .pain-points {
+            padding: 90px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-header h2 {
+            font-size: 2.35rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .pain-card {
+            background: var(--gray-light);
+            padding: 32px 28px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            transition: var(--transition-smooth);
+        }
+
+        .pain-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pain-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        .pain-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(180deg, var(--dark) 0%, #232323 100%);
+            padding: 70px 0;
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 10px;
+        }
+
+        .stat-item h3 {
+            font-size: 3.25rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.5;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 95px 0;
+            background: var(--gray-light);
+        }
+
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .solution-text h2 {
+            font-size: 2.35rem;
+            margin-bottom: 22px;
+        }
+
+        .solution-text p {
+            color: var(--gray);
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            padding: 11px 0;
+            padding-left: 36px;
+            position: relative;
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+
+        .check-list li:hover {
+            transform: translateX(4px);
+        }
+
+        .check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .solution-image {
+            background: linear-gradient(145deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 12px;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: shimmer 8s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(25%, 25%); }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 95px 0;
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            padding: 32px 28px;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+            background: var(--white);
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-6px);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--primary-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* AI Section */
+        .ai-section {
+            padding: 95px 0;
+            background: var(--gray-light);
+            position: relative;
+        }
+
+        .ai-section .section-header {
+            margin-bottom: 20px;
+        }
+
+        .ai-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            color: var(--gray-dark);
+            font-size: 1.08rem;
+            line-height: 1.75;
+        }
+
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .ai-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eee;
+            transition: var(--transition-smooth);
+            display: flex;
+            gap: 20px;
+        }
+
+        .ai-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .ai-card-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: var(--primary-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            transition: var(--transition-smooth);
+        }
+
+        .ai-card:hover .ai-card-icon {
+            background: var(--primary);
+        }
+
+        .ai-card-content h4 {
+            color: var(--dark);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .ai-card-content p {
+            color: var(--gray);
+            font-size: 0.94rem;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 768px) {
+            .ai-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Process Section */
+        .process {
+            padding: 95px 0;
+            background: var(--gray-light);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 55px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step::after {
+            content: "";
+            position: absolute;
+            top: 30px;
+            right: -15px;
+            width: 30px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+        }
+
+        .process-step:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(145deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 0 auto 22px;
+            box-shadow: var(--shadow-primary);
+            transition: var(--transition-smooth);
+        }
+
+        .process-step:hover .step-number {
+            transform: scale(1.08);
+            box-shadow: 0 10px 35px rgba(197, 75, 60, 0.35);
+        }
+
+        .process-step h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            color: var(--gray);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            padding: 95px 0;
+            background: var(--white);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 36px;
+        }
+
+        .why-card {
+            display: flex;
+            gap: 22px;
+            padding: 8px;
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+        }
+
+        .why-card:hover {
+            background: var(--gray-light);
+        }
+
+        .why-card:hover .why-icon {
+            transform: rotate(-5deg) scale(1.05);
+        }
+
+        .why-icon {
+            flex-shrink: 0;
+            width: 62px;
+            height: 62px;
+            background: linear-gradient(145deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-primary);
+            transition: var(--transition-smooth);
+        }
+
+        .why-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Testimonial */
+        .testimonial {
+            padding: 90px 0;
+            background: linear-gradient(180deg, var(--dark) 0%, #232323 100%);
+            color: var(--white);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12rem;
+            font-family: Georgia, serif;
+            color: var(--primary);
+            opacity: 0.1;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 1.35rem;
+            font-style: italic;
+            margin-bottom: 32px;
+            line-height: 1.85;
+            opacity: 0.92;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-company {
+            color: var(--primary);
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 95px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            position: relative;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 60%);
+        }
+
+        .cta-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center;
+            position: relative;
+        }
+
+        .cta-text h2 {
+            font-size: 2.35rem;
+            margin-bottom: 22px;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-text p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+
+        .cta-form {
+            background: var(--white);
+            padding: 42px;
+            border-radius: 14px;
+            color: var(--dark);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e8e8e8;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px var(--primary-light);
+        }
+
+        .cta-form .btn {
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            padding: 16px;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: var(--white);
+            padding: 45px 0;
+            text-align: center;
+        }
+
+        .footer-content p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-top: 16px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            opacity: 0.7;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .pain-grid,
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-step::after {
+                display: none;
+            }
+
+            .solution-content,
+            .cta-content {
+                grid-template-columns: 1fr;
+            }
+
+            .solution-image {
+                order: -1;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .pain-grid,
+            .services-grid,
+            .why-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .cta-text h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">SIXTH <span>CITY</span></div>
+                <nav>
+                    <a href="#">SEO</a>
+                    <a href="#">PPC</a>
+                    <a href="#">Website Design</a>
+                    <a href="#">Industries</a>
+                    <a href="#">About</a>
+                    <a href="#contact" class="phone-btn">888-704-0961</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>SEO Services for Electricians</h1>
+            <p>Dominate local search results, outrank your competition, and generate more qualified leads for your electrical business.</p>
+            <a href="#contact" class="btn btn-white">Get Your Free Evaluation</a>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-points">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Challenges You Face Online</h2>
+                <p>Growing an electrical business is hard enough without having to compete for visibility on Google.</p>
+            </div>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3>Invisible to Local Customers</h3>
+                    <p>When homeowners search "electrician near me," your competitors show up first while your business sits buried on page two or beyond.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Wasted Marketing Budget</h3>
+                    <p>You've tried different marketing tactics, but without a clear strategy, you're spending money without seeing consistent returns.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Spam Competitors Ranking Above You</h3>
+                    <p>Businesses using fake names, addresses, or reviews are unfairly outranking your legitimate electrical company on Google Maps.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Website Traffic but No Calls</h3>
+                    <p>People visit your site but don't convert into leads. Your website isn't optimized to turn visitors into paying customers.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>No Time for Marketing</h3>
+                    <p>Between running jobs, managing crews, and handling customer service, you don't have time to figure out SEO yourself.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Inconsistent Lead Flow</h3>
+                    <p>Some months are busy, others are slow. Without a reliable online presence, your lead generation is unpredictable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>58%</h3>
+                    <p>of people looking for electricians search online before calling</p>
+                </div>
+                <div class="stat-item">
+                    <h3>82%</h3>
+                    <p>of researchers will call an electrician after searching for them</p>
+                </div>
+                <div class="stat-item">
+                    <h3>87%</h3>
+                    <p>of consumers use Google to evaluate local businesses</p>
+                </div>
+                <div class="stat-item">
+                    <h3>$597</h3>
+                    <p>average amount spent after searching for an electrician online</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-text">
+                    <h2>A Proven SEO Strategy Built for Electricians</h2>
+                    <p>We understand the electrical industry and the local markets you serve. Our SEO services are designed specifically to help electricians rank higher in Google's Local Pack, drive more qualified traffic, and convert visitors into customers.</p>
+                    <ul class="check-list">
+                        <li>Rank higher for "electrician near me" and related searches</li>
+                        <li>Dominate the Google Local Pack in your service areas</li>
+                        <li>Outrank competitors—even the spammers</li>
+                        <li>Generate consistent, qualified leads month after month</li>
+                        <li>Track every call and form submission from your website</li>
+                        <li>Build long-term online authority for your business</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">Start Ranking Higher</a>
+                </div>
+                <div class="solution-image">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="font-size: 4rem; margin-bottom: 15px;">📍</div>
+                        <div>Local Search<br>Domination</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>What's Included in Our Electrician SEO Services</h2>
+                <p>A comprehensive approach built specifically for electrical contractors and service companies.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Electrician Keyword Research</h3>
+                    <p>We target high-intent terms like "emergency electrician," "panel upgrades," and "residential rewiring" that bring in customers ready to hire.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📍</div>
+                    <h3>Google Business Profile for Electricians</h3>
+                    <p>Optimize your GBP with the right categories, service areas, photos of your work, and attributes that help you rank in the Local Pack.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📄</div>
+                    <h3>Service Area Pages</h3>
+                    <p>Custom pages targeting each city and neighborhood you serve—so you show up whether someone searches in your hometown or across the county.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔗</div>
+                    <h3>Industry-Relevant Link Building</h3>
+                    <p>Backlinks from electrical associations, trade directories, local chambers, and home services publications that boost your authority.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✍️</div>
+                    <h3>Electrical Service Content</h3>
+                    <p>Detailed service pages for panel upgrades, EV charger installation, whole-home rewiring, and the specific jobs you want more of.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Citation Management</h3>
+                    <p>Consistent NAP (name, address, phone) across Yelp, Angi, HomeAdvisor, BBB, and 50+ directories that matter for electricians.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Google Maps Spam Fighting</h3>
+                    <p>We report fake listings and policy violators cluttering your local results—giving your legitimate business a fair shot at ranking.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Technical SEO</h3>
+                    <p>Fast load times, mobile-friendly design, and proper schema markup so Google understands you're a licensed electrical contractor.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Lead Tracking & Reporting</h3>
+                    <p>Monthly reports showing keyword rankings, website traffic, phone calls, and form submissions—so you see exactly what you're getting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI & Search Section -->
+    <section class="ai-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>SEO in the Age of AI</h2>
+                <p>Search is evolving. We're helping electricians stay ahead of the curve.</p>
+            </div>
+            <p class="ai-intro">Google's AI Overviews, ChatGPT, and other large language models are changing how customers find local services. Businesses with strong online authority and quality content are more likely to be referenced by AI—while those with thin websites risk becoming invisible. Our strategies are built with this new reality in mind.</p>
+            <div class="ai-grid">
+                <div class="ai-card">
+                    <div class="ai-card-icon">🤖</div>
+                    <div class="ai-card-content">
+                        <h4>AI Overviews & Featured Answers</h4>
+                        <p>Google now generates AI summaries for local searches. We optimize your content to be cited in these responses, keeping your business visible.</p>
+                    </div>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-card-icon">📚</div>
+                    <div class="ai-card-content">
+                        <h4>E-E-A-T Signals</h4>
+                        <p>AI systems prioritize Experience, Expertise, Authoritativeness, and Trustworthiness. We help establish your company as a credible source.</p>
+                    </div>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-card-icon">🔄</div>
+                    <div class="ai-card-content">
+                        <h4>Structured Data & Entities</h4>
+                        <p>LLMs understand entities, not just keywords. We implement structured data so AI systems correctly identify your business and services.</p>
+                    </div>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-card-icon">📈</div>
+                    <div class="ai-card-content">
+                        <h4>Future-Proof Strategy</h4>
+                        <p>Quality content, technical excellence, and genuine authority. Our approach builds lasting value across Google and AI assistants.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We Work With You</h2>
+                <p>A straightforward process designed to deliver results without wasting your time.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We audit your current online presence, analyze competitors, and identify opportunities.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Strategy</h3>
+                    <p>We create a custom SEO plan based on your service areas, goals, and competitive landscape.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Implementation</h3>
+                    <p>Our team executes the strategy—optimizing your site, building links, and creating content.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Growth</h3>
+                    <p>You see increased rankings, more traffic, and more qualified leads calling your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Electricians Choose Sixth City</h2>
+                <p>15+ years of experience helping home service businesses grow their online presence.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">📊</div>
+                    <div>
+                        <h3>Results-Focused Approach</h3>
+                        <p>We track every lead and show you exactly how your SEO investment translates to new business.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🏠</div>
+                    <div>
+                        <h3>Home Services Expertise</h3>
+                        <p>We've worked with electricians, plumbers, HVAC companies, and contractors for over 15 years.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">👥</div>
+                    <div>
+                        <h3>100% In-House Team</h3>
+                        <p>No outsourcing. Your strategy, content, and optimization are handled by our expert team.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🤝</div>
+                    <div>
+                        <h3>Long-Term Partnerships</h3>
+                        <p>Many clients have worked with us for 12+ years because we deliver consistent results.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📍</div>
+                    <div>
+                        <h3>National Coverage</h3>
+                        <p>With offices in Cleveland, Columbus, Pittsburgh, Indianapolis, and Chicago—we serve clients nationwide.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📚</div>
+                    <div>
+                        <h3>Education & Transparency</h3>
+                        <p>We keep you informed about what we're doing and why, so you understand your SEO investment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="testimonial-content">
+                <p class="testimonial-quote">"Fantastic to work with the Sixth City Team. We brought them in hoping to increase traffic. With some initial quick changes we saw our traffic more than double within a matter of a couple of months. It is so valuable to have the input from experts who know how SEO and other marketing avenues work and can produce a far greater result than trying to beat the system on your own."</p>
+                <p class="testimonial-author">Dan Eifel</p>
+                <p class="testimonial-company">Summers Rubber</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready to Get More Leads for Your Electrical Business?</h2>
+                    <p>Get a free website evaluation and learn exactly what's holding your site back from ranking higher. No obligation, no pressure—just actionable insights you can use.</p>
+                    <ul class="check-list" style="color: white;">
+                        <li>Complete website audit</li>
+                        <li>Competitor analysis</li>
+                        <li>Keyword opportunity report</li>
+                        <li>Custom recommendations</li>
+                    </ul>
+                </div>
+                <div class="cta-form">
+                    <h3>Get Your Free Evaluation</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website URL</label>
+                            <input type="url" id="website" name="website">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Request Free Evaluation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Sixth City Marketing. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
