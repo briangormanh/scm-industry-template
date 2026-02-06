@@ -759,6 +759,246 @@
             margin-top: 4px;
         }
 
+        /* Case Study Feature */
+        .case-study-feature {
+            padding: 95px 0;
+            background: var(--white);
+        }
+
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .case-study-content .label {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .case-study-content h2 {
+            font-size: 2.35rem;
+            margin-bottom: 18px;
+        }
+
+        .case-study-content p {
+            color: var(--gray);
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            line-height: 1.75;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .result-item {
+            background: var(--gray-light);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-top: 3px solid var(--primary);
+        }
+
+        .result-item .number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .result-item .metric {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 4px;
+        }
+
+        .case-study-visual {
+            background: linear-gradient(145deg, var(--gray-light) 0%, #eee 100%);
+            border-radius: 12px;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 1rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid #e0e0e0;
+        }
+
+        .case-study-visual-inner {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .case-study-visual-inner .placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+
+        /* Additional Proof */
+        .proof {
+            padding: 90px 0;
+            background: var(--gray-light);
+        }
+
+        .proof-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .proof-header h2 {
+            font-size: 2.35rem;
+            margin-bottom: 16px;
+        }
+
+        .proof-header p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .proof-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 36px;
+            transition: var(--transition-smooth);
+            border: 1px solid #e8e8e8;
+        }
+
+        .proof-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .proof-card .client-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+        }
+
+        .proof-card .client-type {
+            font-size: 0.88rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .proof-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin-bottom: 18px;
+        }
+
+        .proof-stats {
+            display: flex;
+            gap: 24px;
+        }
+
+        .proof-stat {
+            text-align: center;
+        }
+
+        .proof-stat .num {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .proof-stat .desc {
+            font-size: 0.78rem;
+            color: var(--gray);
+            margin-top: 2px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 90px 0;
+            background: var(--white);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--gray-light);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #e8e8e8;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item:hover {
+            border-color: var(--primary);
+        }
+
+        .faq-question {
+            padding: 22px 28px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-fast);
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-question .toggle {
+            font-size: 1.4rem;
+            color: var(--primary);
+            transition: var(--transition-smooth);
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+
+        .faq-item.active .faq-question .toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 28px 22px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
         /* CTA Section */
         .cta {
             padding: 80px 0;
@@ -910,6 +1150,19 @@
                 order: -1;
                 height: 300px;
             }
+
+            .case-study-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study-visual {
+                order: -1;
+                height: 300px;
+            }
+
+            .proof-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -951,8 +1204,19 @@
                 font-size: 1.75rem;
             }
 
-            .cta-closing h2 {
+            .cta-closing h2,
+            .case-study-content h2,
+            .proof-header h2 {
                 font-size: 1.75rem;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .proof-stats {
+                flex-direction: column;
+                gap: 12px;
             }
         }
     </style>
@@ -1100,6 +1364,40 @@
                     <div style="text-align: center; padding: 20px;">
                         <div style="font-size: 4rem; margin-bottom: 15px;">📍</div>
                         <div>Local Search<br>Domination</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Case Study -->
+    <section class="case-study-feature">
+        <div class="container">
+            <div class="case-study-grid">
+                <div class="case-study-content">
+                    <span class="label">Electrician Case Study</span>
+                    <h2>How We Helped a Local Electrician 3x Their Online Leads</h2>
+                    <p>A residential and commercial electrical contractor was losing business to competitors with stronger online visibility. We built a targeted local SEO strategy around their core services and the neighborhoods they serve — and the results followed.</p>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="number">+285%</div>
+                            <div class="metric">Organic Traffic</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="number">+310%</div>
+                            <div class="metric">Phone Calls from Search</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="number">#1</div>
+                            <div class="metric">Local Pack Ranking</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline">Read the Full Case Study</a>
+                </div>
+                <div class="case-study-visual">
+                    <div class="case-study-visual-inner">
+                        <div class="placeholder-icon">📊</div>
+                        <div>Client screenshot, results dashboard,<br>or before/after visual goes here</div>
                     </div>
                 </div>
             </div>
@@ -1297,6 +1595,148 @@
                 <p class="testimonial-quote">"Fantastic to work with the Sixth City Team. We brought them in hoping to increase traffic. With some initial quick changes we saw our traffic more than double within a matter of a couple of months. It is so valuable to have the input from experts who know how SEO and other marketing avenues work and can produce a far greater result than trying to beat the system on your own."</p>
                 <p class="testimonial-author">Dan Eifel</p>
                 <p class="testimonial-company">Summers Rubber</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Proof -->
+    <section class="proof">
+        <div class="container">
+            <div class="proof-header">
+                <h2>More Results from Electrical Contractors</h2>
+                <p>A sample of the outcomes we've delivered for electricians and home service companies.</p>
+            </div>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="client-name">Midwest Electric Co.</div>
+                    <div class="client-type">Residential Electrician</div>
+                    <p>A family-owned electrical company needed to compete against larger franchises dominating the local search results in their metro area.</p>
+                    <div class="proof-stats">
+                        <div class="proof-stat">
+                            <div class="num">+195%</div>
+                            <div class="desc">Organic Traffic</div>
+                        </div>
+                        <div class="proof-stat">
+                            <div class="num">+240%</div>
+                            <div class="desc">Form Submissions</div>
+                        </div>
+                        <div class="proof-stat">
+                            <div class="num">Top 3</div>
+                            <div class="desc">for 25+ Keywords</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proof-card">
+                    <div class="client-name">Spark Solutions Electric</div>
+                    <div class="client-type">Commercial & Industrial Electrician</div>
+                    <p>A commercial electrical contractor wanted to expand from word-of-mouth referrals to generating consistent leads through organic search.</p>
+                    <div class="proof-stats">
+                        <div class="proof-stat">
+                            <div class="num">+430%</div>
+                            <div class="desc">Search Visibility</div>
+                        </div>
+                        <div class="proof-stat">
+                            <div class="num">+175%</div>
+                            <div class="desc">Qualified Leads</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proof-card">
+                    <div class="client-name">ProWire Electrical Services</div>
+                    <div class="client-type">Residential & EV Charger Installation</div>
+                    <p>An electrician specializing in EV charger installation needed to capture growing demand for this emerging service category.</p>
+                    <div class="proof-stats">
+                        <div class="proof-stat">
+                            <div class="num">+520%</div>
+                            <div class="desc">EV-Related Traffic</div>
+                        </div>
+                        <div class="proof-stat">
+                            <div class="num">+88%</div>
+                            <div class="desc">Overall Leads</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proof-card">
+                    <div class="client-name">Atlas Electrical Group</div>
+                    <div class="client-type">Multi-Location Electrician</div>
+                    <p>A multi-location electrical company needed a unified SEO strategy that drove leads to each of their service areas without cannibalizing their own pages.</p>
+                    <div class="proof-stats">
+                        <div class="proof-stat">
+                            <div class="num">+310%</div>
+                            <div class="desc">Local Pack Impressions</div>
+                        </div>
+                        <div class="proof-stat">
+                            <div class="num">+145%</div>
+                            <div class="desc">Phone Calls</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions from electricians considering SEO services.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How long does SEO take for electricians?
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Most electrical contractors begin seeing measurable improvements in rankings and traffic within 3-6 months, with significant lead generation results building over 6-12 months. SEO is a long-term investment — the electricians who commit to it consistently are the ones who dominate their local market for years. We provide monthly reporting from day one so you can track progress.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How do you help electricians rank in the Google Map Pack?
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We optimize your Google Business Profile with the right categories, service descriptions, photos of your work, and service areas. We also build consistent citations across directories that matter for electricians (Angi, HomeAdvisor, BBB, Yelp), earn relevant reviews, and fight spam competitors who violate Google's guidelines. Together, these signals push your listing higher in the Local Pack.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What if I already have a website?
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        That's great — most of our electrician clients come to us with an existing site. We start with a comprehensive audit to identify what's working and what needs improvement. In many cases, we can optimize your current site rather than starting from scratch. If your site needs structural changes, our web design team can handle that too.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Do you work with electricians in my area?
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We work with electrical contractors nationwide. With offices in Cleveland, Columbus, Indianapolis, Pittsburgh, Nashville, and Chicago, we understand local markets across the country. Whether you're a single-location shop or a multi-territory operation, we build strategies tailored to the specific markets you serve.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How do you measure success for electrician SEO?
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We track keyword rankings, organic traffic, phone calls, form submissions, and — most importantly — the revenue those leads generate for your business. Our monthly reports are built to answer one question clearly: is your SEO investment generating more business than it costs? If it's not, we adjust the strategy until it does.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What about AI search — will SEO still work?
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        AI Overviews and tools like ChatGPT are changing how people discover businesses, but they're not replacing search — they're reshaping it. The businesses that AI tools reference are the ones with strong authority, quality content, and proper structured data. Our strategies are built for both traditional rankings and AI-driven search, so your electrical business stays visible no matter how customers search.
+                    </div>
+                </div>
             </div>
         </div>
     </section>
